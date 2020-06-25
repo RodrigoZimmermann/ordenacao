@@ -16,22 +16,22 @@ class ClasseParaTestarSort {
 		initializeClass();
 		
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<Veiculo> meuAlgoritmo = new BubbleSort<>();
+		Sort<Veiculo> meuAlgoritmo = new SelectionSort<>();
 
 		long ultimoNanoTime, tempoExecucao;
 		for (Integer i : tamanhos) {
 			Veiculo[] vetorCopiado = Arrays.copyOf(vetor, i);
-			System.out.println("Vetor com " + i + " veÌculos");
+			System.out.println("Vetor com " + i + " ve√≠culos");
 			System.out.println(Arrays.toString(vetorCopiado));
 			ultimoNanoTime = System.nanoTime();
 			meuAlgoritmo.sort(vetorCopiado);
 			tempoExecucao = System.nanoTime() - ultimoNanoTime;
-			System.out.println("Vetor ORDENADO com " + i + " veÌculos em "+tempoExecucao+" ns");
+			System.out.println("Vetor ORDENADO com " + i + " ve√≠culos em "+tempoExecucao+" ns");
 			System.out.println(Arrays.toString(vetorCopiado));
 		}
 
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<Integer> meuAlgoritmo2 = new BubbleSort<>();
+		Sort<Integer> meuAlgoritmo2 = new SelectionSort<>();
 
 		for (Integer i : tamanhos) {
 			Integer[] vetorCopiado = Arrays.copyOf(vetorInts, i);
@@ -45,7 +45,7 @@ class ClasseParaTestarSort {
 		}
 		
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<String> meuAlgoritmo3 = new BubbleSort<>();
+		Sort<String> meuAlgoritmo3 = new SelectionSort<>();
 
 		for (Integer i : tamanhos) {
 			String[] vetorCopiado = Arrays.copyOf(vetorStrings, i);
@@ -62,7 +62,7 @@ class ClasseParaTestarSort {
 	public static void initializeClass() {
 		vetor = new Veiculo[tamanhos[tamanhos.length-1]];
 		Veiculo veic;
-		// geraÁ„o dos dados
+		// gera√ß√£o dos dados
 		String nome, placa, modelo;
 		int ano;
 
@@ -92,7 +92,7 @@ class ClasseParaTestarSort {
 class GeradorAleatorio {
 
 	private static Random geraNumero = new Random();
-	private static String[] nomes = { "JosÈ", "Maria", "Pedro", "Jo„o", "Mario", "Paulo", "Paula", "Sandra", "AndrÈ",
+	private static String[] nomes = { "Jos√©", "Maria", "Pedro", "Jo√£o", "Mario", "Paulo", "Paula", "Sandra", "Andr√©",
 			"Carla" };
 	private static String[] modelos = { "Gol", "Mobi", "Fox", "Fusca", "C3", "Captur", "i30", "Fiesta", "Fit",
 			"Picanto" };
