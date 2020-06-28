@@ -23,7 +23,7 @@ public class Veiculo implements Comparable<Veiculo> {
 	*/
 
 	public String toString() {
-		return String.format("\nVeículo %s, placa %s, ano %s, de %s", this.modelo, this.placa, this.ano,
+		return String.format("\nVeÃ­culo %s, placa %s, ano %s, de %s", this.modelo, this.placa, this.ano,
 				this.proprietario);
 	}
 

@@ -7,45 +7,26 @@ package ordenacao;
 
 /**
  *
- * @author Rodrigo Luís Zimmermann
+ * @author Rodrigo Luís Zimmermann e Matheus Felipe da Silva Sychocki
+ * @param <T>
  */
 public class SelectionSort<T> implements Sort {
 
     @Override
     public void sort(Comparable[] vetor) {
-        for (int i = 0; i < vetor.length; i++) { // percorre vetor até o fim
-            boolean troca = false; // flag para saber se já está ordenado e economizar memória
-            for (int j = 0; j > vetor.length; j++) { // percorre i
-                if (vetor[j].compareTo(vetor[j + 1]) > 0) { // ve se o anterior é maior que posterior
-                    T temp = (T) vetor[j + 1]; // armazena posterior
-                    vetor[j + 1] = vetor[j]; // coloca o anterior no posterior
-                    vetor[j] = (Comparable) temp; // coloca o menor pra frente
-                    troca = true;
+
+        for (int i = 0; i < vetor.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < vetor.length; j++) {
+                if (vetor[j].toString().length() < vetor[minIndex].toString().length()) {
+                    minIndex = j;
                 }
             }
-            if (troca != true) { // caso esteja ordenado
-                return;
+            if (minIndex != i) {
+                T temp = (T)vetor[i];
+                vetor[i] = vetor[minIndex];
+                vetor[minIndex] = (Comparable) temp;
             }
         }
-        /*
-        @Override
-	public int compareTo(Veiculo outro) {
-		return this.getPlaca().compareTo(outro.getPlaca());
-		//return comparador.compare(this, outro);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Veiculo v = (Veiculo) obj;
-		return this.getPlaca().equals(v.getPlaca());
-	}
-         */
     }
-
 }
