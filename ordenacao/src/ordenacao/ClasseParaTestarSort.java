@@ -16,7 +16,7 @@ class ClasseParaTestarSort {
 		initializeClass();
 		
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<Veiculo> meuAlgoritmo = new SelectionSort<>();
+		Sort<Veiculo> meuAlgoritmo = new Selection<>();
 
 		long ultimoNanoTime, tempoExecucao;
 		for (Integer i : tamanhos) {
@@ -31,7 +31,7 @@ class ClasseParaTestarSort {
 		}
 
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<Integer> meuAlgoritmo2 = new SelectionSort<>();
+		Sort<Integer> meuAlgoritmo2 = new Selection<>();
 
 		for (Integer i : tamanhos) {
 			Integer[] vetorCopiado = Arrays.copyOf(vetorInts, i);
@@ -45,7 +45,7 @@ class ClasseParaTestarSort {
 		}
 		
 		// a linha abaixo precisa ser alterada para a classe criada pela equipe
-		Sort<String> meuAlgoritmo3 = new SelectionSort<>();
+		Sort<String> meuAlgoritmo3 = new Selection<>();
 
 		for (Integer i : tamanhos) {
 			String[] vetorCopiado = Arrays.copyOf(vetorStrings, i);
