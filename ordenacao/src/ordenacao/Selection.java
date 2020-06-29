@@ -17,7 +17,7 @@ public class Selection<T> implements Sort {
         for (int i = 0; i < vetor.length; i++) {
             int minIndex = i;
             for (int j = i + 1; j < vetor.length; j++) {
-                if (vetor[j].toString().length() < vetor[minIndex].toString().length()) {
+                if (vetor[j].compareTo(vetor[minIndex]) < 0) {
                     minIndex = j;
                 }
             }
